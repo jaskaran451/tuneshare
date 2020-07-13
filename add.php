@@ -52,6 +52,7 @@
       $favsong = $record['favsong']; 
       $profilepic = $record['profile'];
       $link = $record['link'];
+        $skills=$record['skills'];
       endforeach; 
       //close the db connection 
       $statement->closeCursor(); 
@@ -97,6 +98,10 @@
         <div class="form-group">
           <label for="profile"> Profile Pic </label>
           <input type="file" name="photo" id="profilepic" value="<?php echo $profile;?>">
+        </div>
+          <div class="form-group">
+          <label for="skills"> your skill </label>
+          <input type="text" name="skills" class="form-control" id="skills" value="<?php echo $skills;?>">
         </div>
         <input type="submit" name="submit" value="Submit" class="btn">
       </form>
